@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+body {
+    background-color: #D6AC8C;
+    /* height: 1000px; */
+
+}
+
+.mycontainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* align-self: center; */
+    
+    /* flex-wrap: wrap; */
+    /* width: 600px; */
+    height: 800px;
+    width: 800px;
+    margin: 0 auto;
+    box-shadow: 20px 20px rgb(0, 0, 0, 0.2);
+    /* background-color: #FFF9F3; */
+    height: 850px;
+
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    text-align: center;
+}
+
+.chinessYear {
+    text-align: center;
+    writing-mode: vertical-lr;
+    border: 2px solid black;
+    margin: 20px 50px;
+    width: 49px;
+    padding: 10px;
+}
+
+.animalyear {
+    text-align: center;
+    writing-mode: vertical-lr;
+    position: relative;
+    top: 60px;
+    right: 100px;
+    font-size: 32px;
+}
+
+.year {
+    text-align: center;
+    font-size: large;
+    background-color: #D6533E;
+    margin-left: 480px;
+    margin-right: 30px;
+    padding: 15px;
+    width: 80px;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+.month {
+    font-size: 160px;
+    font-family: 'Secular One', sans-serif;
+    margin-top: 5rem;
+    padding-left: 105px;
+    width: 700px;
+}
+
+.monthE {
+    background-color: #ccc;
+    margin: 0 50px;
+    width: 800px;
+    font-weight: bolder;
+}
+
+.joke {
+
+    writing-mode: vertical-lr;
+    text-align: start;
+    width: 60px;
+    height: 300px;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.ans {
+    display: none;
+}
+
+.joke:hover .ans {
+    display: block;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 30px 50px;
+
+}
+
+table td {
+    /* border: 2px solid #ccc; */
+    padding: 3px 9px;
+    width: 80px;
+    /* text-align: center; */
+    transition-duration: 0.5s;
+}
+
+tr:not(tr:nth-child(1))>td:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+#today {
+    color: #D6533E;
+}
+
+#today::after {
+    color: white;
+    font-weight: 900;
+    content: '🌼';
+    font-size: large;
+}
+
+a {
+    text-decoration: none;
+    color: #784719;
+}
+
+tr>td:nth-child(6),
+td:nth-child(7) {
+    background-color: #F2CF7B;
+    color: #000;
+}
+
+tr:nth-child(1)>td:nth-child(6),
+tr:nth-child(1)>td:nth-child(7) {
+    background-color: #F2CF7B;
+    color: #D6533E;
+}
+
+/* 側邊攔 */
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: fixed;
+    top: 350px;
+    left: -35px;
+    border-radius: 50%;
+    transition-duration: 2s;
+    text-align: center;
+    z-index: 100;
+
+}
+
+.circler {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: fixed;
+    top: 460px;
+    left: -35px;
+    border-radius: 50%;
+    transition-duration: 2s;
+    text-align: center;
+    font-size: 22px;
+    z-index: 100;
+}
+
+#p {
+    position: relative;
+    top: 35px;
+    left: 15px;
+    font-size: larger;
+}
+
+#demo {
+    position: absolute;
+    top: 150px;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+#demo>p {
+    text-align: start;
+    color: white;
+    font-weight: 900;
+}
+
+/* todo */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    /* background: #eee; */
+    font-size: 18px;
+    transition: 0.2s;
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li:hover {
+    background: rgb(189, 188, 188);
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #979494;
+    color: white;
+}
+
+/* 箱子 */
+.scene {
+    position: relative;
+    right: -1300px;
+    bottom: 250px;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    perspective-origin: 50% -100px;
+
+    width: 500px;
+    height: 500px;
+}
+
+.cube {
+    position: relative;
+    left: 280px;
+    top: 30px;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    /* backface-visibility: visible; */
+}
+
+.side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #E6A96D;
+    border: 1px solid white;
+}
+
+.back {
+    transform: translateZ(-50px)
+}
+
+.left {
+    transform: translateX(-50px) rotateY(-90deg);
+}
+
+.right {
+    transform: translateX(50px) rotateY(90deg);
+}
+
+.top {
+    transform: translateY(-50px) rotateX(90deg);
+    background-color: transparent;
+    transform-style: preserve-3d;
+}
+
+.top div {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: 1s;
+}
+
+.top .topl {
+    left: 0;
+    background-color: #E6A96D;
+    width: 50px;
+    transform-origin: 0;
+
+}
+
+.cube:hover .topl {
+    transform: rotateY(-135deg);
+}
+
+.topr {
+    transition: 1s;
+    background-color: #E6A96D;
+    width: 50px;
+    right: 0;
+    transform-origin: right;
+}
+
+.cube:hover .topr {
+    transform: rotateY(135deg);
+}
+
+.bottom {
+    transform: translateY(50px) rotateX(-90deg);
+    box-shadow: 5px -15px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.front {
+    transform: translateZ(50px);
+    text-align: center;
+    padding-top: 40%;
+}
+
+.cube .text {
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+.cube:hover .text {
+    transform: translateY(-60px);
+}
